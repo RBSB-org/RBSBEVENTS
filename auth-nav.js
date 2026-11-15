@@ -90,7 +90,6 @@ function showUserNavigation(user) {
                     <small>${safeEmail}</small>
                 </div>
 
-                <a href="customer-dashboard.html"><span aria-hidden="true">▦</span> Customer Dashboard</a>
                 <a href="profile.html"><span aria-hidden="true">♙</span> Profile</a>
                 <a href="my-booking.html"><span aria-hidden="true">▣</span> My Bookings</a>
                 <a href="budget.html"><span aria-hidden="true">◷</span> Budget Planner</a>
