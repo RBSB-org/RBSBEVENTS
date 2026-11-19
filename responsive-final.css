@@ -263,60 +263,6 @@ h1, h2, h3, p, a, li, td, th, label, button { overflow-wrap: anywhere; }
   .admin-layout select, .admin-layout textarea { font-size: 16px !important; }
 }
 
-/* =========================================================
-   3D SCENES (rbsb-3d.js) — large screens only
-   ========================================================= */
-.rbsb-3d { display: none; pointer-events: none; }
-.rbsb-3d canvas { display: block; width: 100%; height: 100%; }
-
-@media (min-width: 1100px) {
-  .rbsb-3d--hero {
-    display: block; position: absolute; z-index: 1;
-    right: clamp(16px, 4vw, 100px); top: 50%; transform: translateY(-50%);
-    height: min(94%, 600px); aspect-ratio: 1 / 1;
-  }
-}
-
-/* Auth pages: the 3D scene replaces the old glass blob + caption */
-@media (min-width: 900px) {
-  body.auth-page .auth-welcome-panel { overflow: clip !important; }
-  body.auth-page .auth-welcome-panel > .rbsb-3d--panel {
-    display: block !important; position: sticky; top: 24px; z-index: 1;
-    width: 100%; height: min(calc(100svh - 48px), 760px); max-height: 100%;
-  }
-  body.auth-page .auth-welcome-panel.has-3d::before,
-  body.auth-page .auth-welcome-panel.has-3d::after { display: none !important; }
-}
-
-/* ---------- Auth card: grows with its content on laptops/tablets (no inner scrolling) ---------- */
-@media (min-width: 901px) {
-  body.auth-page .auth-main { place-items: center !important; }
-  body.auth-page .auth-container {
-    height: auto !important;
-    min-height: min(760px, calc(100svh - 48px)) !important;
-  }
-  body.auth-page .auth-form-panel { max-height: none !important; overflow: visible !important; }
-  body.auth-page .auth-welcome-panel { min-height: 100% !important; }
-}
-
-/* Keep hero copy clear of the 3D model on big screens */
-@media (min-width: 1100px) {
-  .rbsb-3d--hero { right: clamp(8px, 2.5vw, 70px); height: min(92%, 560px); }
-  .hero-section.has-3d .hero-content { max-width: min(62%, 780px); margin-left: clamp(24px, 6vw, 130px) !important; }
-  .events-hero.has-3d .events-hero-content { width: 54% !important; max-width: 760px; margin: 0 auto 0 clamp(24px, 7vw, 140px) !important; text-align: left !important; }
-  .venues-hero.has-3d .venues-hero-content,
-  .services-hero.has-3d .services-hero-content,
-  .about-hero.has-3d .about-hero-content,
-  .budget-hero.has-3d .budget-hero-content { max-width: min(56%, 760px); }
-}
-@media (min-width: 1100px) {
-  .about-hero.has-3d .about-hero-content,
-  .budget-hero.has-3d .budget-hero-content {
-    max-width: min(54%, 720px) !important; width: auto;
-    margin: 0 auto 0 clamp(24px, 7vw, 140px) !important; text-align: left !important;
-  }
-}
-
 /* Laptop widths: nav stays on one row beside the logo */
 @media (min-width: 1051px) {
   .site-header > .header-container {

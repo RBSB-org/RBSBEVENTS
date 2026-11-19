@@ -136,7 +136,7 @@ img{max-width:100%;height:auto}
 /* 3) Homepage featured-venue photos. eclat-theme.css sets `background:#e9e3d9` on
       .venue-image, which resets background-image and hid the photos — re-declare them. */
 .venue-image.royal-venue-image{background-image:linear-gradient(0deg,rgba(8,24,43,.10),transparent 45%),url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=75")!important}
-.venue-image.garden-venue-image{background-image:linear-gradient(0deg,rgba(8,24,43,.10),transparent 45%),url("https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=900&q=75")!important}
+.venue-image.garden-venue-image{background-image:linear-gradient(0deg,rgba(8,24,43,.10),transparent 45%),url("https://images.unsplash.com/photo-1478145787956-f6f12c59624d?auto=format&fit=crop&w=900&q=75")!important}
 .venue-image.party-venue-image{background-image:linear-gradient(0deg,rgba(8,24,43,.10),transparent 45%),url("https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=75")!important}
 
 /* 4) Small gold section labels / tags were pale gold on cream (contrast ~1.6).

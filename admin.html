@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#14243A">
 
-  <title>RBSB Events | Admin Dashboard</title>
+  <title>EventWale | Admin Dashboard</title>
 
   <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="motion.css">
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="responsive-final.css">
+    <link rel="icon" type="image/svg+xml" href="eventwale-logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eventwale-neon.css">
+    <link rel="stylesheet" href="eventwale-fixes.css">
 </head>
 
 <body>
@@ -22,7 +28,7 @@
   <aside class="sidebar" id="sidebar">
 
     <div class="brand">
-      <h2>RBSB<span>EVENTS</span></h2>
+      <h2 class="ew-logo"><svg class="ew-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="16" fill="#b8f03c"/><rect x="14" y="19" width="36" height="31" rx="7" fill="none" stroke="#0b1004" stroke-width="4.5"/><path d="M22 13v10M42 13v10M14 29h36" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round"/><path d="M24 40l6 6 11-12" fill="none" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ew-word">EVENT<b>WALE</b></span></h2>
       <small>ADMIN CONSOLE</small>
     </div>
 
@@ -130,7 +136,7 @@
 
         <div class="welcome-banner">
           <div>
-            <span class="eyebrow">RBSB EVENTS MANAGEMENT</span>
+            <span class="eyebrow">EVENTWALE MANAGEMENT</span>
             <h2>Welcome to your dashboard 👋</h2>
             <p>Manage your events, bookings and venues in one place.</p>
           </div>
@@ -325,7 +331,7 @@
         <div class="section-toolbar">
           <div>
             <h2>Manage Services</h2>
-            <p>Manage services offered on RBSB Events.</p>
+            <p>Manage services offered on EventWale.</p>
           </div>
 
           <button class="primary-button" data-open-form="service">
@@ -693,7 +699,7 @@
             </label>
             <label class="color-row">
               <span>Website Name</span>
-              <input type="text" id="siteNameInput" maxlength="40" value="RBSBEVENTS">
+              <input type="text" id="siteNameInput" maxlength="40" value="EventWale">
             </label>
 
             <div class="theme-actions">
@@ -718,7 +724,7 @@
             <div class="preview-window">
 
               <div class="preview-sidebar">
-                <strong>RBSB Events</strong>
+                <strong>EventWale</strong>
                 <span>Overview</span>
                 <span>Bookings</span>
                 <span>Analytics</span>
@@ -744,7 +750,7 @@
     </div>
 
     <footer class="admin-footer">
-      RBSB Events Admin Console · 2026
+      EventWale Admin Console · 2026
     </footer>
 
   </main>
@@ -812,7 +818,7 @@
 <script type="module" src="admin-operations.js"></script>
 
     <script src="smart-enhancements.js" defer></script>
-    <script src="motion.js" defer></script>
 <script src="admin-mobile.js" defer></script>
+<script src="image-fallback.js" defer></script>
 </body>
 </html>

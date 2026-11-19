@@ -1,16 +1,8 @@
-/* RBSBEVENTS smart customer helpers — lightweight, no paid API required. */
+/* RBSB EVENTS — simple form suggestions and phone country codes. */
 (() => {
   const places = ["Ludhiana, Punjab", "Chandigarh", "Amritsar, Punjab", "Jalandhar, Punjab", "Patiala, Punjab", "Delhi", "New Delhi", "Mumbai", "Jaipur", "Shimla", "Mohali, Punjab", "Bathinda, Punjab"];
   const categories = ["Wedding", "Birthday Party", "Corporate Event", "Engagement", "Anniversary", "Baby Shower", "Concert", "Conference", "Private Party", "Catering", "Photography", "Decoration", "Entertainment"];
-  const normal = value => String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9 ]/g, "").trim();
-  function distance(a, b) {
-    const row = Array.from({length: b.length + 1}, (_, i) => i);
-    for (let i = 1; i <= a.length; i++) {
-      let prev = row[0]; row[0] = i;
-      for (let j = 1; j <= b.length; j++) { const old = row[j]; row[j] = Math.min(row[j] + 1, row[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1)); prev = old; }
-    }
-    return row[b.length];
-  }
+  const normal = value => String(value || "").toLowerCase().trim();
   function attachAutocomplete(input, source) {
     if (!input || input.dataset.smartSuggestReady) return;
     input.dataset.smartSuggestReady = "1";
@@ -24,7 +16,11 @@
     input.addEventListener("input", () => {
       const q = normal(input.value); list.innerHTML = ""; active = -1;
       if (q.length < 2) { close(); return; }
-      current = source.map(label => ({label, key: normal(label)})).map(item => ({...item, score: item.key.startsWith(q) ? 0 : item.key.includes(q) ? 1 : distance(q, item.key.split(" ")[0]) <= Math.max(1, Math.floor(q.length * .34)) ? 2 : 9})).filter(x => x.score < 3).sort((a,b) => a.score-b.score).slice(0,5);
+      // Simple matching: show options that start with or contain what the user typed.
+      current = source
+        .filter(label => normal(label).includes(q))
+        .slice(0, 5)
+        .map(label => ({ label }));
       if (!current.length) { close(); return; }
       current.forEach((item, index) => { const option = document.createElement("button"); option.type = "button"; option.className = "smart-suggest-option"; option.setAttribute("role", "option"); option.textContent = item.label; option.addEventListener("mousedown", e => { e.preventDefault(); choose(item.label); }); list.appendChild(option); });
       list.hidden = false;

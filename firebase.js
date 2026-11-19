@@ -4,7 +4,8 @@ import { initializeApp } from
 
 import {
     getAuth,
-    GoogleAuthProvider
+    GoogleAuthProvider,
+    FacebookAuthProvider
 } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
 
 import {
@@ -41,4 +42,9 @@ googleProvider.setCustomParameters({
     prompt: "select_account"
 });
 
-console.log("RBSBWALE Firebase initialized successfully!");
+// Facebook sign-in provider
+export const facebookProvider = new FacebookAuthProvider();
+facebookProvider.addScope("email");
+
+
+console.log("EventWale Firebase initialized successfully!");

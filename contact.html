@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Us | RBSB Events</title>
+    <title>Contact Us | EventWale</title>
 
     <meta name="description"
-        content="Contact RBSB Events for event-planning enquiries, venue information and assistance with your celebration plans.">
+        content="Contact EventWale for event-planning enquiries, venue information and assistance with your celebration plans.">
 
     <script src="theme-cache.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -34,6 +34,12 @@
     <link rel="stylesheet" href="azure-nocturne.css">
     <link rel="stylesheet" href="rbsb-polish.css">
     <link rel="stylesheet" href="responsive-final.css">
+    <link rel="icon" type="image/svg+xml" href="eventwale-logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eventwale-neon.css">
+    <link rel="stylesheet" href="eventwale-fixes.css">
 </head>
 
 <body>
@@ -44,7 +50,7 @@
 
 
         <div class="logo">
-            <a href="index.html">RBSB<span>EVENTS</span></a>
+            <a href="index.html" class="ew-logo" aria-label="EventWale home"><svg class="ew-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="16" fill="#b8f03c"/><rect x="14" y="19" width="36" height="31" rx="7" fill="none" stroke="#0b1004" stroke-width="4.5"/><path d="M22 13v10M42 13v10M14 29h36" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round"/><path d="M24 40l6 6 11-12" fill="none" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ew-word">EVENT<b>WALE</b></span></a>
         </div>
 
         <nav class="main-nav">
@@ -77,7 +83,7 @@
 
             <p>
                 Have a question, an idea or an event to plan?
-                Get in touch with RBSB Events and explore how to
+                Get in touch with EventWale and explore how to
                 organize your special occasion.
             </p>
 
@@ -442,7 +448,7 @@
             <h2>Frequently Asked Questions</h2>
 
             <p>
-                Here are some common questions about RBSB Events.
+                Here are some common questions about EventWale.
             </p>
 
         </div>
@@ -454,11 +460,11 @@
             <details class="contact-faq-item">
 
                 <summary>
-                    What is RBSB Events?
+                    What is EventWale?
                 </summary>
 
                 <p>
-                    RBSB Events is a student web-development project designed
+                    EventWale is a student web-development project designed
                     to bring event discovery, venue exploration, service
                     information and budget planning together in one place.
                 </p>
@@ -522,7 +528,7 @@
                 </summary>
 
                 <p>
-                    Yes. Enquiries are saved securely in our database and an email notification is sent to the RBSB Events team.
+                    Yes. Enquiries are saved securely in our database and an email notification is sent to the EventWale team.
                 </p>
 
             </details>
@@ -543,7 +549,7 @@
 
             <p>
                 Explore event ideas, discover venues and start organizing
-                your plans with RBSB Events.
+                your plans with EventWale.
             </p>
 
             <div class="contact-cta-buttons">
@@ -567,7 +573,7 @@
     <footer class="site-footer reference-footer">
   <div class="footer-content reference-footer-grid">
     <div class="footer-brand reference-footer-contact">
-      <a href="index.html" class="footer-logo">RBSB<span>EVENTS</span></a>
+      <a href="index.html" class="footer-logo ew-logo" aria-label="EventWale home"><svg class="ew-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="16" fill="#b8f03c"/><rect x="14" y="19" width="36" height="31" rx="7" fill="none" stroke="#0b1004" stroke-width="4.5"/><path d="M22 13v10M42 13v10M14 29h36" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round"/><path d="M24 40l6 6 11-12" fill="none" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ew-word">EVENT<b>WALE</b></span></a>
       <p>Your ideas, our inspiration. Let's make every celebration memorable.</p>
       <a class="footer-contact-item" href="contact.html"><span aria-hidden="true">✆</span> Contact our team</a>
     </div>
@@ -612,7 +618,7 @@
     </div>
   </div>
   <div class="reference-footer-bottom">
-    <span class="footer-mark"><strong>R</strong> RBSB EVENTS</span>
+    <span class="footer-mark"><strong>E</strong> EVENTWALE</span>
     <p>© 2026 RBSB organisation. Created as a student web-development project.</p>
   </div>
 </footer>
@@ -673,7 +679,7 @@ form?.addEventListener("submit", async (event) => {
         submitButton.setAttribute("aria-busy", "true");
         submitButton.innerHTML = '<span class="contact-spinner" aria-hidden="true"></span> Sending...';
     }
-    showSubmissionState("processing", "Please wait while we securely save your message and notify the RBSB Events team.");
+    showSubmissionState("processing", "Please wait while we securely save your message and notify the EventWale team.");
 
     let emailSent = false;
     try {
@@ -730,7 +736,7 @@ form?.addEventListener("submit", async (event) => {
 });
 </script>
 <script type="module" src="auth-nav.js"></script>
-<!-- RBSB EVENTS GLOBAL THEME LOADER -->
+<!-- EVENTWALE GLOBAL THEME LOADER -->
 <script>
 (function () {
     const THEME_KEY = "rbsbAdminTheme";
@@ -781,8 +787,8 @@ form?.addEventListener("submit", async (event) => {
 </script>
     <script type="module" src="./site-theme.js"></script>
     <script src="smart-enhancements.js" defer></script>
-    <script src="motion.js" defer></script>
 <script src="mobile-nav.js" defer></script>
+<script src="image-fallback.js" defer></script>
 </body>
 
 </html>

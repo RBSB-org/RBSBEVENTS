@@ -27,3 +27,17 @@ RESPONSIVE UPDATE
   pauses off-screen, static if reduced-motion, hides itself if WebGL is unavailable.
 - Login/signup card grows with content on laptops (no inner scrolling); nav stays on one row from 1051px.
 - Admin fix: removed leftover transform on .admin-layout (was breaking position:fixed sidebar); drawer now truly full-height.
+
+
+EVENTWALE NEON NOIR REDESIGN
+- eventwale-neon.css is loaded LAST on every page (incl. admin). Black canvas, lime (#b8f03c) accent,
+  translucent brown glass cards/tables/tabs, serif display headings with italic lime emphasis.
+  It uses high-specificity overrides so the older light-theme sheets can no longer bring back white areas.
+- New brand: EVENTWALE logo (eventwale-logo.svg icon, eventwale-logo-wordmark-dark.png wordmark, used as favicon too).
+  site-theme.js / admin.js no longer overwrite the logo, page titles or favicon.
+- login.html / signup.html rebuilt in the new split layout with Google, Facebook and Microsoft sign-in
+  (social-auth.js + providers in firebase.js). Email/password, verification, remember-me and reset logic kept.
+  ACTION NEEDED in Firebase Console -> Authentication -> Sign-in method: enable Facebook (App ID/Secret) and
+  Microsoft (client ID/secret) or those buttons will show "not switched on yet".
+- Fixed broken tab: the profile menu linked to customer-dashboard.html which did not exist (404). Page created.
+- Fixed: admin.html loaded a missing admin-operations.js (404) - reference removed; all admin tabs verified.

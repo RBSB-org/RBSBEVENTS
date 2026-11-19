@@ -6,11 +6,7 @@ import {
 }
 from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
 
-console.log("RBSB Events auth-nav.js loaded");
-console.log(
-    "Header found:",
-    document.querySelector(".header-actions")
-);
+
 // Show a loading indicator while Firebase checks login status
 function showAuthLoading() {
     const headerActions = document.querySelector(".header-actions");
@@ -56,7 +52,7 @@ function showUserNavigation(user) {
     const profilePicture =
         savedPicture ||
         user.photoURL ||
-        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='50' fill='%23e9dfc9'/%3E%3Ccircle cx='50' cy='36' r='18' fill='%2314243a'/%3E%3Cpath d='M16 92c3-22 16-33 34-33s31 11 34 33' fill='%2314243a'/%3E%3C/svg%3E";
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='50' fill='%231d1810'/%3E%3Ccircle cx='50' cy='36' r='18' fill='%23b8f03c'/%3E%3Cpath d='M16 92c3-22 16-33 34-33s31 11 34 33' fill='%23b8f03c'/%3E%3C/svg%3E";
 
     const safeName = escapeHTML(displayName);
     const safeEmail = escapeHTML(email);
@@ -75,7 +71,7 @@ function showUserNavigation(user) {
                     src="${escapeHTML(profilePicture)}"
                     alt="Profile picture"
                     class="shared-profile-picture"
-                    onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%23e9dfc9%22/%3E%3Ccircle cx=%2250%22 cy=%2236%22 r=%2218%22 fill=%22%2314243a%22/%3E%3Cpath d=%22M16 92c3-22 16-33 34-33s31 11 34 33%22 fill=%22%2314243a%22/%3E%3C/svg%3E'"
+                    onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%231d1810%22/%3E%3Ccircle cx=%2250%22 cy=%2236%22 r=%2218%22 fill=%22%23b8f03c%22/%3E%3Cpath d=%22M16 92c3-22 16-33 34-33s31 11 34 33%22 fill=%22%23b8f03c%22/%3E%3C/svg%3E'"
                 >
 
             </button>

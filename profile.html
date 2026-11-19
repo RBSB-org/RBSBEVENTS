@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Profile | RBSB EVENTS</title>
+    <title>My Profile | EVENTWALE</title>
 
     <script src="theme-cache.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -129,6 +129,12 @@
     <link rel="stylesheet" href="azure-nocturne.css">
     <link rel="stylesheet" href="rbsb-polish.css">
     <link rel="stylesheet" href="responsive-final.css">
+    <link rel="icon" type="image/svg+xml" href="eventwale-logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eventwale-neon.css">
+    <link rel="stylesheet" href="eventwale-fixes.css">
 </head>
 
 <body class="auth-page">
@@ -139,7 +145,7 @@
 
 
         <div class="logo">
-            <a href="index.html">RBSB<span>EVENTS</span></a>
+            <a href="index.html" class="ew-logo" aria-label="EventWale home"><svg class="ew-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="16" fill="#b8f03c"/><rect x="14" y="19" width="36" height="31" rx="7" fill="none" stroke="#0b1004" stroke-width="4.5"/><path d="M22 13v10M42 13v10M14 29h36" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round"/><path d="M24 40l6 6 11-12" fill="none" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ew-word">EVENT<b>WALE</b></span></a>
         </div>
 
         <nav class="main-nav">
@@ -169,7 +175,7 @@
             <h1>My Profile</h1>
 
             <p class="subtitle">
-                Make your RBSB Events account your own!
+                Make your EventWale account your own!
             </p>
 
             <!-- PROFILE PICTURE -->
@@ -243,7 +249,7 @@
     <footer class="site-footer reference-footer">
   <div class="footer-content reference-footer-grid">
     <div class="footer-brand reference-footer-contact">
-      <a href="index.html" class="footer-logo">RBSB<span>EVENTS</span></a>
+      <a href="index.html" class="footer-logo ew-logo" aria-label="EventWale home"><svg class="ew-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="16" fill="#b8f03c"/><rect x="14" y="19" width="36" height="31" rx="7" fill="none" stroke="#0b1004" stroke-width="4.5"/><path d="M22 13v10M42 13v10M14 29h36" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round"/><path d="M24 40l6 6 11-12" fill="none" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ew-word">EVENT<b>WALE</b></span></a>
       <p>Your ideas, our inspiration. Let's make every celebration memorable.</p>
       <a class="footer-contact-item" href="contact.html"><span aria-hidden="true">✆</span> Contact our team</a>
     </div>
@@ -288,7 +294,7 @@
     </div>
   </div>
   <div class="reference-footer-bottom">
-    <span class="footer-mark"><strong>R</strong> RBSB EVENTS</span>
+    <span class="footer-mark"><strong>E</strong> EVENTWALE</span>
     <p>© 2026 RBSB organisation. Created as a student web-development project.</p>
   </div>
 </footer>
@@ -517,7 +523,7 @@ setTimeout(() => {
 
     <!-- SHARED NAVIGATION -->
     <script type="module" src="auth-nav.js"></script>
-<!-- RBSB EVENTS GLOBAL THEME LOADER -->
+<!-- EVENTWALE GLOBAL THEME LOADER -->
 <script>
 (function () {
     const THEME_KEY = "rbsbAdminTheme";
@@ -568,7 +574,7 @@ setTimeout(() => {
 </script>
     <script type="module" src="./site-theme.js"></script>
     <script src="smart-enhancements.js" defer></script>
-    <script src="motion.js" defer></script>
 <script src="mobile-nav.js" defer></script>
+<script src="image-fallback.js" defer></script>
 </body>
 </html>

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Discover Venues | RBSB EVENTS</title>
+    <title>Discover Venues | EVENTWALE</title>
 
     <meta name="description"
-        content="Discover beautiful wedding venues, banquet halls, gardens and party locations with RBSB EVENTS.">
+        content="Discover beautiful wedding venues, banquet halls, gardens and party locations with EVENTWALE.">
 
     <script src="theme-cache.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="azure-nocturne.css">
     <link rel="stylesheet" href="rbsb-polish.css">
     <link rel="stylesheet" href="responsive-final.css">
+    <link rel="icon" type="image/svg+xml" href="eventwale-logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eventwale-neon.css">
+    <link rel="stylesheet" href="eventwale-fixes.css">
 </head>
 
 <body>
@@ -29,7 +35,7 @@
 
 
         <div class="logo">
-            <a href="index.html">RBSB<span>EVENTS</span></a>
+            <a href="index.html" class="ew-logo" aria-label="EventWale home"><svg class="ew-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="16" fill="#b8f03c"/><rect x="14" y="19" width="36" height="31" rx="7" fill="none" stroke="#0b1004" stroke-width="4.5"/><path d="M22 13v10M42 13v10M14 29h36" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round"/><path d="M24 40l6 6 11-12" fill="none" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ew-word">EVENT<b>WALE</b></span></a>
         </div>
 
         <nav class="main-nav">
@@ -53,9 +59,7 @@
 
     <!-- VENUES HERO SECTION -->
     <section class="venues-hero">
-<div class="rbsb-3d rbsb-3d--hero" data-model="arch" aria-hidden="true"></div>
-
-        <div class="venues-hero-content">
+<div class="venues-hero-content">
 
             <span class="section-tag">FIND YOUR PERFECT PLACE</span>
 
@@ -405,7 +409,7 @@
                 <div class="venue-image">
 
                     <img
-                        src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=900&q=72"
+                        src="https://images.unsplash.com/photo-1478145787956-f6f12c59624d?auto=format&fit=crop&w=900&q=72"
                         alt="Wedding reception space with elegant event decorations">
 
                 </div>
@@ -468,7 +472,7 @@
 
         <div class="venue-benefits-heading">
 
-            <span class="section-tag">THE RBSB EVENTS ADVANTAGE</span>
+            <span class="section-tag">THE EVENTWALE ADVANTAGE</span>
 
             <h2>Why Find Your Venue With Us?</h2>
 
@@ -529,7 +533,7 @@
 
             <p>
                 Explore our event services and start planning
-                a memorable celebration with RBSB EVENTS.
+                a memorable celebration with EVENTWALE.
             </p>
 
             <a href="services.html" class="primary-btn">
@@ -545,7 +549,7 @@
     <footer class="site-footer reference-footer">
   <div class="footer-content reference-footer-grid">
     <div class="footer-brand reference-footer-contact">
-      <a href="index.html" class="footer-logo">RBSB<span>EVENTS</span></a>
+      <a href="index.html" class="footer-logo ew-logo" aria-label="EventWale home"><svg class="ew-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="16" fill="#b8f03c"/><rect x="14" y="19" width="36" height="31" rx="7" fill="none" stroke="#0b1004" stroke-width="4.5"/><path d="M22 13v10M42 13v10M14 29h36" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round"/><path d="M24 40l6 6 11-12" fill="none" stroke="#0b1004" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ew-word">EVENT<b>WALE</b></span></a>
       <p>Your ideas, our inspiration. Let's make every celebration memorable.</p>
       <a class="footer-contact-item" href="contact.html"><span aria-hidden="true">✆</span> Contact our team</a>
     </div>
@@ -590,7 +594,7 @@
     </div>
   </div>
   <div class="reference-footer-bottom">
-    <span class="footer-mark"><strong>R</strong> RBSB EVENTS</span>
+    <span class="footer-mark"><strong>E</strong> EVENTWALE</span>
     <p>© 2026 RBSB organisation. Created as a student web-development project.</p>
   </div>
 </footer>
@@ -657,7 +661,7 @@ document.addEventListener("DOMContentLoaded", () => {
     filterVenues();
 });
 </script>
-<!-- RBSB EVENTS GLOBAL THEME LOADER -->
+<!-- EVENTWALE GLOBAL THEME LOADER -->
 <script>
 (function () {
     const THEME_KEY = "rbsbAdminTheme";
@@ -708,9 +712,8 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
     <script type="module" src="./site-theme.js"></script>
     <script src="smart-enhancements.js" defer></script>
-    <script src="motion.js" defer></script>
 <script src="mobile-nav.js" defer></script>
-<script src="rbsb-3d.js" defer></script>
+<script src="image-fallback.js" defer></script>
 </body>
 
 </html>

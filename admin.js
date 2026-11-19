@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
         toast.textContent = message;
         toast.classList.add("show");
 
-        clearTimeout(window.RBSBEVENTSToastTimer);
+        clearTimeout(window.EventWaleToastTimer);
 
-        window.RBSBEVENTSToastTimer = setTimeout(function () {
+        window.EventWaleToastTimer = setTimeout(function () {
             toast.classList.remove("show");
         }, 2500);
     }
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const themeDefaults = {
         primary: "#14243A", accent: "#C5A46D", background: "#FAF8F3",
         surface: "#FFFFFF", text: "#273444", muted: "#667085", border: "#E7E2D8",
-        siteName: "RBSBEVENTS"
+        siteName: "EventWale"
     };
     const themeFields = {
         primary: "sidebarColor", accent: "accentColor", background: "backgroundColor",
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nameInput = document.getElementById("siteNameInput");
         if (nameInput) nameInput.value = theme.siteName || themeDefaults.siteName;
         const adminBrand = document.querySelector(".brand h2");
-        if (adminBrand) adminBrand.textContent = theme.siteName || themeDefaults.siteName;
+        // The EventWale logo in the sidebar is a fixed brand asset; do not overwrite it.
         document.querySelectorAll("[data-theme]").forEach(button => {
             button.classList.toggle("active", button.dataset.theme === theme.preset);
         });
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     const siteNameInput = document.getElementById("siteNameInput");
     if (siteNameInput) siteNameInput.addEventListener("input", () => {
-        selectedTheme.siteName = siteNameInput.value.trim().slice(0, 40) || "RBSBEVENTS";
+        selectedTheme.siteName = siteNameInput.value.trim().slice(0, 40) || "EventWale";
     });
     document.querySelectorAll("[data-theme]").forEach(button => button.addEventListener("click", () => {
         if (presets[button.dataset.theme]) {
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function saveGlobalTheme(theme) {
         const clean = { ...theme };
         delete clean.preset;
-        clean.siteName = String(clean.siteName || "RBSBEVENTS").trim().slice(0, 40) || "RBSBEVENTS";
+        clean.siteName = String(clean.siteName || "EventWale").trim().slice(0, 40) || "EventWale";
         clean.updatedAt = Date.now();
         await set(ref(db, "siteSettings/theme"), clean);
         try { localStorage.setItem("rbsb_site_theme_v1", JSON.stringify(clean)); } catch (cacheError) { console.warn("Theme cache unavailable:", cacheError); }
